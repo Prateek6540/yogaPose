@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Class - Asanalyze</title>
+    <link rel="stylesheet" href="static\\styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-text">Asanalyze</span>
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}" class="active">Home</a>
+            <a href="{{ url_for('classes') }}">Classes</a>
+            <a href="{{ url_for('practice') }}">Practice</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+            <a href="{{ url_for('login') }}" class="btn-login">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </nav>
+
+    <div class="background-image">
+        <img src="images/auth-bg.jpg" alt="Yoga Background">
+        <div class="overlay"></div>
+    </div>
+
+    <main class="booking-container">
+        <div class="booking-box">
+            <div class="booking-header">
+                <div class="logo-circle">
+                    <span class="logo-text">A</span>
+                </div>
+                <h2>Book Your Class</h2>
+                <p>Reserve your spot in our yoga classes</p>
+            </div>
+
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group floating">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="fullname" required>
+                    <label for="fullname">Full Name</label>
+                </div>
+
+                <div class="form-group floating">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" required>
+                    <label for="email">Email Address</label>
+                </div>
+
+                <div class="form-group floating">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phone" required>
+                    <label for="phone">Phone Number</label>
+                </div>
+
+                <div class="form-group floating">
+                    <i class="fas fa-calendar"></i>
+                    <input type="date" id="date" required>
+                    <label for="date" class="date-label">Preferred Date</label>
+                </div>
+
+                <div class="form-group floating">
+                    <i class="fas fa-clock"></i>
+                    <select id="time" required>
+                        <option value="" disabled selected>Select Time</option>
+                        <option value="morning">Morning (6:00 AM - 9:00 AM)</option>
+                        <option value="afternoon">Afternoon (12:00 PM - 3:00 PM)</option>
+                        <option value="evening">Evening (5:00 PM - 8:00 PM)</option>
+                    </select>
+                    <label for="time" class="select-label">Preferred Time</label>
+                </div>
+
+                <div class="form-group floating">
+                    <i class="fas fa-yoga"></i>
+                    <select id="class" required>
+                        <option value="" disabled selected>Select Class</option>
+                        <option value="hatha">Basic Hatha Yoga</option>
+                        <option value="yin">Gentle Yin Yoga</option>
+                        <option value="vinyasa">Vinyasa Flow</option>
+                        <option value="ashtanga">Ashtanga Yoga</option>
+                        <option value="power">Power Yoga</option>
+                        <option value="meditation">Advanced Meditation</option>
+                    </select>
+                    <label for="class" class="select-label">Select Class</label>
+                </div>
+
+                <div class="form-group floating">
+                    <i class="fas fa-comment"></i>
+                    <textarea id="notes" rows="3"></textarea>
+                    <label for="notes">Special Notes (Optional)</label>
+                </div>
+
+                <div class="form-options">
+                    <label class="terms">
+                        <input type="checkbox" required>
+                        <span>I agree to the <a href="#">Booking Terms & Conditions</a></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn primary">
+                    <span>Confirm Booking</span>
+                    <i class="fas fa-check"></i>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="static\\script.js"></script>
+</body>
+</html> 

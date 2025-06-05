@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asanalyze - Home</title>
+    <link rel="stylesheet" href="static\\styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-text">Asanalyze</span>
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}" class="active">Home</a>
+            <a href="{{ url_for('classes') }}">Classes</a>
+            <a href="{{ url_for('practice') }}">Practice</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+            <a href="{{ url_for('login') }}" class="btn-login">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </nav>
+   <div class="container">
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Your Inner Peace</h1>
+            <p>Join our community of mindful practitioners and start your journey to wellness today.</p>
+            <div class="hero-buttons">
+                <a href="{{ url_for('classes') }}" class="btn primary">Explore Classes</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="static\\img\\back4.jpeg" alt="Yoga Practice">
+        </div>
+    </section>
+
+    <section id="classes" class="classes">
+        <h2>Our Classes</h2>
+        <div class="class-filters">
+            <button class="filter-btn active" data-filter="all">All Classes</button>
+            <button class="filter-btn" data-filter="beginner">Beginner</button>
+            <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+            <button class="filter-btn" data-filter="advanced">Advanced</button>
+        </div>
+        <div class="class-grid">
+            <div class="class-card" data-level="beginner">
+                <div class="class-image">
+                    <img src="static\\img\\h1.jpeg" alt="Hatha Yoga">
+                    <div class="class-overlay">
+                        <span class="class-level">Beginner</span>
+                        <span class="class-duration"><i class="far fa-clock"></i> 60 min</span>
+                    </div>
+                </div>
+                <div class="class-content">
+                    <h3>Basic Hatha Yoga</h3>
+                    <p>Perfect introduction to yoga with fundamental poses and breathing techniques. Build strength and flexibility at your own pace.</p>
+                    <div class="class-details">
+                        <span><i class="fas fa-user"></i> Sarah Johnson</span>
+                        <span><i class="fas fa-users"></i> Max 15</span>
+                    </div>
+                    <a href="{{ url_for('booking') }}" class="btn-book">Book Now</a>
+                </div>
+            </div>
+            <div class="class-card" data-level="beginner">
+                <div class="class-image">
+                    <img src="static\\img\\h2.jpeg" alt="Yin Yoga">
+                    <div class="class-overlay">
+                        <span class="class-level">Beginner</span>
+                        <span class="class-duration"><i class="far fa-clock"></i> 45 min</span>
+                    </div>
+                </div>
+                <div class="class-content">
+                    <h3>Gentle Yin Yoga</h3>
+                    <p>Slow-paced practice focusing on deep stretching and relaxation. Perfect for stress relief and improving flexibility.</p>
+                    <div class="class-details">
+                        <span><i class="fas fa-user"></i> Lisa Chen</span>
+                        <span><i class="fas fa-users"></i> Max 12</span>
+                    </div>
+                    <a href="{{ url_for('booking') }}" class="btn-book">Book Now</a>
+                </div>
+            </div>
+            <div class="class-card" data-level="intermediate">
+                <div class="class-image">
+                    <img src="static\\img\\h3.jpeg" alt="Vinyasa Flow">
+                    <div class="class-overlay">
+                        <span class="class-level">Intermediate</span>
+                        <span class="class-duration"><i class="far fa-clock"></i> 75 min</span>
+                    </div>
+                </div>
+                <div class="class-content">
+                    <h3>Vinyasa Flow</h3>
+                    <p>Dynamic movement synchronized with breath. Build strength and endurance through flowing sequences.</p>
+                    <div class="class-details">
+                        <span><i class="fas fa-user"></i> Michael Chen</span>
+                        <span><i class="fas fa-users"></i> Max 12</span>
+                    </div>
+                    <a href="{{ url_for('booking') }}" class="btn-book">Book Now</a>
+                </div>
+            </div>
+            <div class="class-card" data-level="intermediate">
+                <div class="class-image">
+                    <img src="static\\img\\h4.jpeg" alt="Ashtanga Yoga">
+                    <div class="class-overlay">
+                        <span class="class-level">Intermediate</span>
+                        <span class="class-duration"><i class="far fa-clock"></i> 90 min</span>
+                    </div>
+                </div>
+                <div class="class-content">
+                    <h3>Ashtanga Yoga</h3>
+                    <p>Structured practice with set sequences. Develop discipline and strength through consistent practice.</p>
+                    <div class="class-details">
+                        <span><i class="fas fa-user"></i> David Kumar</span>
+                        <span><i class="fas fa-users"></i> Max 10</span>
+                    </div>
+                    <a href="{{ url_for('booking') }}" class="btn-book">Book Now</a>
+                </div>
+            </div>
+            <div class="class-card" data-level="advanced">
+                <div class="class-image">
+                    <img src="static\\img\\h5.jpeg" alt="Power Yoga">
+                    <div class="class-overlay">
+                        <span class="class-level">Advanced</span>
+                        <span class="class-duration"><i class="far fa-clock"></i> 90 min</span>
+                    </div>
+                </div>
+                <div class="class-content">
+                    <h3>Power Yoga</h3>
+                    <p>Intensive practice combining strength, flexibility, and cardio. Challenge yourself with advanced poses and sequences.</p>
+                    <div class="class-details">
+                        <span><i class="fas fa-user"></i> Emma Davis</span>
+                        <span><i class="fas fa-users"></i> Max 8</span>
+                    </div>
+                    <a href="{{ url_for('booking') }}" class="btn-book">Book Now</a>
+                </div>
+            </div>
+            <div class="class-card" data-level="advanced">
+                <div class="class-image">
+                    <img src="static\\img\\h6.jpeg" alt="Advanced Meditation">
+                    <div class="class-overlay">
+                        <span class="class-level">Advanced</span>
+                        <span class="class-duration"><i class="far fa-clock"></i> 60 min</span>
+                    </div>
+                </div>
+                <div class="class-content">
+                    <h3>Advanced Meditation</h3>
+                    <p>Deep guided sessions to master mindfulness and achieve inner peace. Perfect for experienced practitioners.</p>
+                    <div class="class-details">
+                        <span><i class="fas fa-user"></i> Guru Singh</span>
+                        <span><i class="fas fa-users"></i> Max 10</span>
+                    </div>
+                    <a href="{{ url_for('booking') }}" class="btn-book">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-comment"></i>
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Asanalyze , Manglore city</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+91 2345678931</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>asanalyze@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Asanalyze</h4>
+                <p>Where Passion Meets Precision</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="{{ url_for('classes') }}">Classes</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
+                <a href="{{ url_for('login') }}">Login</a>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Asanalyze. All rights reserved.</p>
+        </div>
+    </footer>
+   </div>
+
+    <script src="static\\script.js"></script>
+</body>
+</html> 
